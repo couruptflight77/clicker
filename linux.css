@@ -1,0 +1,19 @@
+#reset {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSkBr5HUYE1Dzo9W9QECvPJ5g8KT63qcOChJrhR0blJ-3W1tLz);
+    width: 6.3cm;
+    height: 5.5cm;
+    color: blue ;
+    font-size: 1cm;
+}
+
+#OS {
+    color: lightgray;
+    width: 10cm;
+    height:1.5 cm;
+}
+
+#OS-storages {
+    color: blue;
+    position: fixed;
+    right: 1cm;
+}
