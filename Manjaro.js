@@ -41,15 +41,22 @@ var costDebian = document.querySelector('#dcost')
 
 function codeReset() {
     if (codeCountActive === 1) {
-            localStorage.removeItem("code")
-    localStorage.setItem("code", code)
-    codeDiv.innerHTML = "<br><em>" + code + "</em>";
+        localStorage.removeItem("code")
+        localStorage.setItem("code", code)
+        localStorage.removeItem("ucost")
+        localStorage.setItem("ucost", ucost)
+        localStorage.removeItem("cost1")
+        localStorage.setItem("cost1", cost1)
+        codeDiv.innerHTML = "<br><em>" + code + "</em>";    
+    if (ucost >= 15) {
+        
+    }
     }
 }
 
 function Reset() {
-    var youSure = prompt("confirm with y")
-    if (youSure === "y") {
+    var youSure = prompt("confirm with Y")
+    if (youSure === "Y") {
         codeCountActive = 0
         setTimeout(100)
         localStorage.clear()
@@ -57,4 +64,12 @@ function Reset() {
         localStorage.setItem("linuxClickUpgraded", 0)
         location.reload()
     }
+}
+var ucostString = localStorage.getItem("ucost")
+var ucost = parseInt(ucostString)
+var cost1String = localStorage.getItem("cost1")
+var cost1 = parseInt(cost1String)
+
+function uBuy() {
+    ucost = ucost + cost1
 }
