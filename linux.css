@@ -16,19 +16,79 @@
     height:2cm;
 }
 
+#OS3 {
+    width: 10cm;
+    height:2cm;
+}
+
 #OS-storages {
     color: blue;
     position: fixed;
     right: 1cm;
-    top: 10cm;
+    top: 1cm;
 }
 
 img {
     height: 1cm;
     width: 1cm;
+    z-index: 1;
 }
 
 #linux {
-    width: 7.5cm;
+    width: 7.5cm;   
     height: 7.5cm;
+}
+
+.usersName {
+    top: 1cm;
+    right: 26cm;
+    position: fixed;
+}
+
+.usersNum {
+    top: 1.5cm;
+    right: 26cm;
+    position: fixed;
+}
+
+.upgrade {
+    position: fixed;
+    bottom: 1cm;
+    right: 1cm;
+    height: 1cm;
+    width: 1cm;
+    z-index: 0;
+}
+
+.upgrade1 {
+    position: fixed;
+    bottom: 1cm;
+    right: 2.1cm;
+    height: 1cm;
+    width: 1cm;
+    z-index: 0;
+}
+
+.usersName1 {
+    top: 1cm;
+    right: 23cm; 
+    position: fixed;
+}
+
+.usersNum1 {
+    top: 1.5cm;
+    right: 23cm;
+    position: fixed;
+}
+
+.usersName2 {
+    top: 1cm;
+    right: 20cm; 
+    position: fixed;
+}
+
+.usersNum2 {
+    top: 1.5cm;
+    right: 20cm;
+    position: fixed;
 }
