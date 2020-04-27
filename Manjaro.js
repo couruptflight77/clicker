@@ -1,19 +1,19 @@
 var codeCountActive = 1
 var clickCode
+var codeString = localStorage.getItem("code")
+var code = parseInt(codeString)
 
-var playedBefore = localStorage.getItem("code")
-if (playedBefore >= 0) {
-    var codeString = localStorage.getItem("code")
-    code = parseInt(codeString)
+var playedBefore = localStorage.getItem("played before")
+if (playedBefore === "yes") {
 } else {
-    code = 0
-    localStorage.setItem("linuxClickUpgraded", "0")
+    alert("Confirm the reset to start the game")
+    Reset()
 }
 
 function codeActivate(){
     setInterval(() => {
         codeReset()
-        }, 1);
+        }, 10);
 }
  
 function CookieUrl() {
@@ -47,10 +47,8 @@ function codeReset() {
         localStorage.setItem("ucost", ucost)
         localStorage.removeItem("cost1")
         localStorage.setItem("cost1", cost1)
-        codeDiv.innerHTML = "<br><em>" + code + "</em>";    
-    if (ucost >= 15) {
-        
-    }
+        codeDiv.innerHTML = "<br><em>" + code + "</em>";
+        costUbuntu.innerHTML = "<br><em>" + ucost + "</em>";
     }
 }
 
@@ -62,6 +60,9 @@ function Reset() {
         localStorage.clear()
         localStorage.setItem("code", 0)
         localStorage.setItem("linuxClickUpgraded", 0)
+        localStorage.setItem("cost1", 1)
+        localStorage.setItem("ucost", 15)
+        localStorage.setItem("played before", "yes")
         location.reload()
     }
 }
@@ -70,6 +71,18 @@ var ucost = parseInt(ucostString)
 var cost1String = localStorage.getItem("cost1")
 var cost1 = parseInt(cost1String)
 
+function consoleLog() {
+    console.log("Cost Increment", localStorage.getItem("cost1"));
+    console.log("Cost of ubuntu systems ", localStorage.getItem("ucost"))
+    console.log("Your code", localStorage.getItem("code"))
+}
+
 function uBuy() {
+    code - ucost
     ucost = ucost + cost1
+}
+
+if (code === NaN) {
+    code = 0
+    alert("money has been reset due to a glich i apologise sorry about the game it happens with a refresh i think")
 }
