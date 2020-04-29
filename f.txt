@@ -1,0 +1,4 @@
+Stats show how many users and how much cash per second it generates
+cash per second for all the distros
+new button placement and fixed to screen
+three buttons for gettin each distro
