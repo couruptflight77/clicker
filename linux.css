@@ -4,6 +4,9 @@
     height: 5.5cm;
     color: blue ;
     font-size: 1cm;
+    bottom: 3.9cm;
+    right: 1cm;
+    position: fixed;
 }
 
 #OS1 {
@@ -91,4 +94,53 @@ img {
     top: 1.5cm;
     right: 20cm;
     position: fixed;
+}
+
+#Image {
+    width: 1cm;
+    height: 1cm;
+}
+
+.usersName3 {
+    top: 1cm;
+    right: 17cm; 
+    position: fixed;
+}
+
+.usersNum3 {
+    top: 1.5cm;
+    right: 17cm;
+    position: fixed;
+}
+
+.userNumb {
+    top: 2cm;
+    right: 26cm;
+    position: fixed;
+}
+
+.userNumb1 {
+    top: 2cm;
+    right: 23cm;
+    position: fixed;
+}
+
+.userNumb2 {
+    top: 2cm;
+    right: 20cm;
+    position: fixed;
+}
+
+.userNumb3 {
+    top: 2cm;
+    right: 17cm;
+    position: fixed;
+}
+
+#tenth{
+    right: 2cm;
+    width: 1cm;
+    height: 1cm;
+    position: fixed;
+    bottom: 1cm;
 }
