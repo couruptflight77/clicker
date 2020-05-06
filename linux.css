@@ -4,7 +4,7 @@
     height: 5.5cm;
     color: blue ;
     font-size: 1cm;
-    bottom: 3.9cm;
+    bottom: 2.3cm;
     right: 1cm;
     position: fixed;
 }
@@ -38,6 +38,7 @@ img {
 }
 
 #linux {
+    padding-top: 0.7cm;
     width: 7.5cm;   
     height: 7.5cm;
 }
@@ -60,7 +61,6 @@ img {
     right: 1cm;
     height: 1cm;
     width: 1cm;
-    z-index: 0;
 }
 
 .upgrade1 {
@@ -69,7 +69,6 @@ img {
     right: 2.1cm;
     height: 1cm;
     width: 1cm;
-    z-index: 0;
 }
 
 .usersName1 {
@@ -106,10 +105,21 @@ img {
     right: 17cm; 
     position: fixed;
 }
+.usersName4 {
+    top: 1cm;
+    right: 14cm; 
+    position: fixed;
+}
 
 .usersNum3 {
     top: 1.5cm;
     right: 17cm;
+    position: fixed;
+}
+
+.usersNum4 {
+    top: 1.5cm;
+    right: 14cm;
     position: fixed;
 }
 
@@ -136,6 +146,11 @@ img {
     right: 17cm;
     position: fixed;
 }
+.userNumb4 {
+    top: 2cm;
+    right: 14cm;
+    position: fixed;
+}
 
 #tenth{
     right: 2cm;
@@ -144,3 +159,70 @@ img {
     position: fixed;
     bottom: 1cm;
 }
+
+.konami{
+    font-size: 3.4mm;
+}
+
+.upgradeu{
+    position: fixed;
+    bottom: 1cm;
+    right: 3cm;
+    height: 1cm;
+    width: 2cm;
+}
+.upgraded{
+    position: fixed;
+    bottom: 1cm;
+    right: 5cm;
+    height: 1cm;
+    width: 2cm;
+}
+.upgradec{
+    position: fixed;
+    bottom: 1cm;
+    right: 7cm;
+    height: 1cm;
+    width: 2cm;
+}
+.upgradet{
+    position: fixed;
+    bottom: 1cm;
+    right: 9cm;
+    height: 1cm;
+    width: 2cm;
+}
+.upgradem{
+    position: fixed;
+    bottom: 1cm;
+    right: 11cm;
+    height: 1cm;
+    width: 2cm;
+}
+
+.codeD{
+    position: relative;
+    left: 3.4cm;
+    z-index: 100;
+}
+
+.l1{
+    position: fixed;
+    background-color: lawngreen;
+    color: lawngreen;
+}
+.r2{
+    position: fixed;
+    background-color: lawngreen;
+    color: lawngreen;
+}
+
+.t3{
+    position: fixed;
+    background-color: lawngreen;
+    color: lawngreen;
+    top: 4.8cm;
+    z-index: -1;
+    height: 1cm;
+}
+
