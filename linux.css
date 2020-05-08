@@ -199,6 +199,13 @@ img {
     height: 1cm;
     width: 2cm;
 }
+#noClick{
+    position: fixed;
+    bottom: 1cm;
+    right: 13cm;
+    height: 1cm;
+    width: 2cm;
+}
 
 .codeD{
     position: relative;
@@ -224,5 +231,26 @@ img {
     top: 4.8cm;
     z-index: -1;
     height: 1cm;
+}
+
+.one{
+    position: fixed;
+    right: 11cm;
+    width: 2cm;
+    height: 2cm;
+    top: 1cm;
+}
+.ten{
+    position: fixed;
+    right: 11cm;
+    width: 2cm;
+    height: 2cm;
+    top: 5cm;
+}
+.s{
+    position: fixed;
+    right: 11cm;
+    width: 2cm;
+    height: 2cm;
 }
 

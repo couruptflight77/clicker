@@ -1,5 +1,6 @@
 var codeCountActive = 1
 var clickCode
+var costB = 0
 var codeString = localStorage.getItem("code")
 var code = parseInt(codeString)
 var ucostString = localStorage.getItem("ucost")
@@ -121,13 +122,22 @@ var tUsers1 = tUsers * tUsersUpgrade
 var mUsers1 = mUsers * mUsersUpgrade
 
 const pressed = [];
+const pressed1 = [];
 const secretCode = "local";
+const secretCode1 = "develope";
 
 window.addEventListener("keyup", e => {
   pressed.push(e.key);
   pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
   if (pressed.join("").includes(secretCode)) {
     console.log(localStorage);   
+  }
+});
+window.addEventListener("keyup", e => {
+  pressed1.push(e.key);
+  pressed.splice(-secretCode1.length - 1, pressed1.length - secretCode1.length);
+  if (pressed1.join("").includes(secretCode1)) {
+    console.log("localStorage");   
   }
 });
 
@@ -153,6 +163,8 @@ function codeActivate(){
         userIncome()
         LinuxClick()
         away()
+        disableScroll()
+        buy1()
         code = code - clickCode
 }
 
@@ -178,7 +190,6 @@ function LinuxClick() {
 
 function codeReset() {
     if (codeCountActive === 1) {
-        var costB = 0
         var costN = 0
         var cLogo = 0
         if (selectedLogo === 1){
@@ -186,17 +197,17 @@ function codeReset() {
             if (ucost > 9999){
                 if (ucost > 9999999) {
                     if (ucost > 9999999999){
-                        ucost = (ucost / 1000000000) + "B"
+                        ucostA = (ucost / 1000000000) + "B"
                     } else {
-                        ucost = (ucost / 1000000) + "M"
+                        ucostA = (ucost / 1000000) + "M"
                     }
                 } else {
-                    ucost = (ucost / 1000) + "K"
+                    ucostA = (ucost / 1000) + "K"
                 }
             } else {
-                ucost = ucost
+                ucostA = ucost
             }
-            costB = ucost
+            costB = ucostA
             cLogo = [0]
         } else {
             if (selectedLogo === 2){
@@ -204,17 +215,17 @@ function codeReset() {
                 if (dcost > 9999){
                     if (dcost > 9999999) {
                         if (dcost > 9999999999){
-                            dcost = (dcost / 1000000000) + "B"
+                            dcostA = (dcost / 1000000000) + "B"
                         } else {
-                            dcost = (dcost / 1000000) + "M"
+                            dcostA = (dcost / 1000000) + "M"
                         }
                     } else {
-                        dcost = (dcost / 1000) + "K"
+                        dcostA = (dcost / 1000) + "K"
                     }
                 } else {
-                    dcost = dcost
+                    dcostA = dcost
                 }
-                costB = dcost
+                costB = dcostA
                 cLogo = [1]
             } else {
                 if (selectedLogo === 3){
@@ -222,17 +233,17 @@ function codeReset() {
                     if (ccost > 9999){
                         if (ccost > 9999999) {
                             if (ccost > 9999999999){
-                                ccost = (ccost / 1000000000) + "B"
+                                ccostA = (ccost / 1000000000) + "B"
                             } else {
-                                ccost = (ccost / 1000000) + "M"
+                                ccostA = (ccost / 1000000) + "M"
                             }
                         } else {
-                            ccost = (ccost / 1000) + "K"
+                            ccostA = (ccost / 1000) + "K"
                         }
                     } else {
-                        ccost = ccost
+                        ccostA = ccost
                     }
-                    costB = ccost
+                    costB = ccostA
                     cLogo = [2]
                 } else {
                     if (selectedLogo === 4){
@@ -240,17 +251,17 @@ function codeReset() {
                     if (tcost > 9999){
                         if (tcost > 9999999) {
                             if (tcost > 9999999999){
-                                tcostK = (tcost / 1000000000) + "B"
+                                tcostA = (tcost / 1000000000) + "B"
                             } else {
-                                tcostK = (tcost / 1000000) + "M"
+                                tcostA = (tcost / 1000000) + "M"
                             }
                         } else {
-                            tcostK = (tcost / 1000) + "K"
+                            tcostA = (tcost / 1000) + "K"
                         }
                     } else {
-                        tcostK = tcost
+                        tcostA = tcost
                     }
-                    costB = tcostK
+                    costB = tcostA
                     cLogo = [3]
                     } else {
                         if (selectedLogo === 5){
@@ -258,23 +269,94 @@ function codeReset() {
                             if (mcost > 9999){
                                 if (mcost > 9999999) {
                                     if (mcost > 9999999999){
-                                        mcostK = (mcost / 1000000000) + "B"
+                                        mcostA = (mcost / 1000000000) + "B"
                                     } else {
-                                        mcostK = (mcost / 1000000) + "M"
+                                        mcostA = (mcost / 1000000) + "M"
                                     }
                                 } else {
-                                    mcostK = (mcost / 1000) + "K"
+                                    mcostA = (mcost / 1000) + "K"
                                 }
                             } else {
-                                mcostK = mcost
+                                mcostA = mcost
                             }
-                            costB = mcostK
+                            costB = mcostA
                             cLogo = [4]
                         }
                     }
                 }
             }
         }
+        var uUcostA = 0
+        var dUcostA = 0
+        var cUcostA = 0
+        var tUcostA = 0
+        var mUcostA = 0
+        if (uUcost > 9999){
+            if (uUcost > 9999999) {
+                if (uUcost > 9999999999){
+                    uUcostA = (uUcost / 1000000000) + "B"
+                } else {
+                    uUcostA = (uUcost / 1000000) + "M"
+                }
+            } else {
+                uUcostA = (uUcost / 1000) + "K"
+            }
+        } else {
+            uUcostA = uUcost
+        }
+        if (dUcost > 9999){
+            if (dUcost > 9999999) {
+                if (dUcost > 9999999999){
+                    dUcostA = (dUcost / 1000000000) + "B"
+                } else {
+                    dUcostA = (dUcost / 1000000) + "M"
+                }
+            } else {
+                dUcostA = (dUcost / 1000) + "K"
+            }
+        } else {
+            dUcostA = dUcost
+        }
+        if (cUcost > 9999){
+            if (cUcost > 9999999) {
+                if (cUcost > 9999999999){
+                    cUcostA = (cUcost / 1000000000) + "B"
+                } else {
+                    cUcostA = (cUcost / 1000000) + "M"
+                }
+            } else {
+                cUcostA = (cUcost / 1000) + "K"
+            }
+        } else {
+            cUcostA = cUcost
+        }
+        if (tUcost > 9999){
+            if (tUcost > 9999999) {
+                if (cUcost > 9999999999){
+                    tUcostA = (tUcost / 1000000000) + "B"
+                } else {
+                    tUcostA = (tUcost / 1000000) + "M"
+                }
+            } else {
+                tUcostA = (tUcost / 1000) + "K"
+            }
+        } else {
+        tUcostA = tUcost
+        }
+        if (mUcost > 9999){
+            if (mUcost > 9999999) {
+                if (mUcost > 9999999999){
+                    mUcostA = (mUcost / 1000000000) + "B"
+                } else {
+                    mUcostA = (mUcost / 1000000) + "M"
+                }
+            } else {
+                mUcostA = (mUcost / 1000) + "K"
+            }
+        } else {
+            mUcostA = mUcost
+        }
+        costB = ucostA
         uUsers1 = uUsers * uUsersUpgrade
         dUsers1 = dUsers * dUsersUpgrade
         cUsers1 = cUsers * cUsersUpgrade
@@ -360,7 +442,6 @@ function codeReset() {
         localStorage.setItem("onlineS", new Date().getSeconds())
         var codeF = code.toFixed(1)
         var uStats = (uUsers1 * 0.1).toFixed(1)
-        var codeFS = 0
         if (codeF > 9999){
             if (codeF > 9999999) {
                 if (codeF > 9999999999){
@@ -376,7 +457,7 @@ function codeReset() {
         }
         codeDiv.innerHTML = "<br><em>" + codeF + "</em>";
         code1Div.innerHTML = "<em>" + codePSF + "</em>";
-        costButton.innerHTML = "<em>" + costB + "</em>";
+        costButton.innerHTML = "<em>" + costBA + "</em>";
         costName.innerHTML = "<em>" + costN + "</em>";
         imageLogo.src = lg[cLogo]
         usersUbuntu.innerHTML = "<em>" + uUsers + "</em>"
@@ -391,13 +472,13 @@ function codeReset() {
         codePerMint.innerHTML = "<em>" + mUsers1 * 1000 + "</em>"
         clickCodeCost.innerHTML = "<em>" + clickUpgradeCost + "</em>"
         clickCodeCost1.innerHTML = "<em>" + clickCode + "</em>"
-        uupgrade.innerHTML = "<em>" + uUcost + "</em>"
-        dupgrade.innerHTML = "<em>" + dUcost + "</em>"
-        cupgrade.innerHTML = "<em>" + cUcost + "</em>"
-        tupgrade.innerHTML = "<em>" + tUcost + "</em>"
-        mupgrade.innerHTML = "<em>" + mUcost + "</em>"
+        uupgrade.innerHTML = "<em>" + uUcostA + "</em>"
+        dupgrade.innerHTML = "<em>" + dUcostA + "</em>"
+        cupgrade.innerHTML = "<em>" + cUcostA + "</em>"
+        tupgrade.innerHTML = "<em>" + tUcostA + "</em>"
+        mupgrade.innerHTML = "<em>" + mUcostA + "</em>"
         codePSTA = codePS        
-        codePS = 0
+        codePS = 0       
     }
 }
 
@@ -408,6 +489,7 @@ function Reset() {
         setTimeout(100)
         localStorage.clear()
         localStorage.setItem("code", 0)
+        localStorage.setItem("uUsers", 0)
         localStorage.setItem("linuxClickUpgraded", 0)
         localStorage.setItem("cost1", 1)
         localStorage.setItem("cost2", 10)
@@ -430,7 +512,6 @@ function Reset() {
         localStorage.setItem("tUcost", 500000)
         localStorage.setItem("mUcost", 5000000)
         localStorage.setItem("played before", "yes")
-        localStorage.setItem("uUsers", 0)
         localStorage.setItem("dUsers", 0)
         localStorage.setItem("cUsers", 0)
         localStorage.setItem("tUsers", 0)
@@ -600,7 +681,7 @@ function uUpgrade(){
         code = code - uUcost
         uUsersUpgrade = uUsersUpgrade + 1
         uUcost = uUcost + Ucost1
-        Ucost1 = Ucost1 + 100
+        Ucost1 = Ucost1 + 1000
     }
 }
 
@@ -609,7 +690,7 @@ function dUpgrade(){
         code = code - dUcost
         dUsersUpgrade = dUsersUpgrade + 1
         dUcost = dUcost + Ucost2
-        Ucost2 = Ucost2 + 200
+        Ucost2 = Ucost2 + 5000
     }
 }
 
@@ -618,7 +699,7 @@ function cUpgrade(){
         code = code - cUcost
         cUsersUpgrade = cUsersUpgrade + 1
         cUcost = cUcost + Ucost3
-        Ucost3 = Ucost3 + 300
+        Ucost3 = Ucost3 + 15000
     }
 }
 
@@ -627,7 +708,7 @@ function tUpgrade(){
         code = code - tUcost
         tUsersUpgrade = tUsersUpgrade + 1
         tUcost = tUcost + Ucost4
-        Ucost4 = Ucost4 + 400
+        Ucost4 = Ucost4 + 500000
     }
 }
 
@@ -636,7 +717,7 @@ function mUpgrade(){
         code = code - mUcost
         mUsersUpgrade = mUsersUpgrade + 1
         mUcost = mUcost + Ucost5
-        Ucost5 = Ucost5 + 500
+        Ucost5 = Ucost5 + 5000000
     }
 }
 
@@ -648,24 +729,42 @@ function away(){
 function awayA(){
     console.log(codePSTA, secondsAway);
     var off = secondsAway * codePSTA
-    if (off = 0){
+    if (off === 0){
         null
     } else {
     if (off > 9999){
         if (off > 9999999) {
             if (off > 9999999999){
-                off = (off / 1000000000) + "B"
+                offD = (off / 1000000000) + "B"
             } else {
-                off = (off / 1000000) + "M"
+                offD = (off / 1000000) + "M"
             }
         } else {
-            off = (off / 1000) + "K"
+            offD = (off / 1000) + "K"
         }
     } else {
-        off = off
+        offD = off
     }
-}
     alert("while you were away you have earn't")
-    alert(off)
+    alert(offD)
     code = code + off
+    off = 0
+}
+}
+
+function disableScroll() { 
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  
+        window.onscroll = function() { 
+            window.scrollTo(scrollLeft, scrollTop); 
+        }; 
+} 
+var costBA
+function buy1(){
+    costBA = costB
+}
+
+function buy10(){
+    var costInQuestion = 0
 }
