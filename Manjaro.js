@@ -1,6 +1,17 @@
 var codeCountActive = 1
 var clickCode
 var costB = 0
+var buyAmount = 1
+var ucostm
+var dcostm
+var ccostm
+var tcostm
+var mcostm
+var scost1
+var scost2
+var scost3
+var scost4
+var scost5
 var codeString = localStorage.getItem("code")
 var code = parseInt(codeString)
 var ucostString = localStorage.getItem("ucost")
@@ -161,10 +172,10 @@ function codeActivate(){
         codeReset()
         }, 10);
         userIncome()
-        LinuxClick()
-        away()
-        disableScroll()
         buy1()
+        LinuxClick()
+        disableScroll()
+        away()
         code = code - clickCode
 }
 
@@ -190,96 +201,229 @@ function LinuxClick() {
 
 function codeReset() {
     if (codeCountActive === 1) {
+        if(buyAmount === 1){
+            ucostm = ucost
+            dcostm = dcost
+            ccostm = ccost
+            tcostm = tcost
+            mcostm = mcost
+        } else {
+            if(buyAmount === 10){
+                if(selectedLogo === 1){
+                    var sucost = ucost
+                    if(scost1 === cost1){
+
+                    } else {
+                        scost1 = cost1
+                    }
+                    var ucost10 = sucost
+                    var ucost9 = ucost10 + scost1
+                    scost1 = scost1 + 1
+                    var ucost8 = ucost9 + scost1
+                    scost1 = scost1 + 1
+                    var ucost7 = ucost8 + scost1
+                    scost1 = scost1 + 1
+                    var ucost6 = ucost7 + scost1
+                    scost1 = scost1 + 1
+                    var ucost5 = ucost6 + scost1
+                    scost1 = scost1 + 1
+                    var ucost4 = ucost5 + scost1
+                    scost1 = scost1 + 1
+                    var ucost3 = ucost4 + scost1
+                    scost1 = scost1 + 1
+                    var ucost2 = ucost3 + scost1
+                    scost1 = scost1 + 1
+                    var ucost1 = ucost2 + scost1
+                    ucostm = (ucost1 + ucost2 + ucost3 + ucost4 + ucost5 + ucost6 + ucost7 + ucost8 + ucost9 + ucost10)
+                } else {
+                    if(selectedLogo === 2){
+                        var sdcost = dcost
+                        scost2 = cost2
+                        var dcost10 = sdcost
+                        var dcost9 = dcost10 + scost2
+                        scost2 = scost2 + 10
+                        var dcost8 = dcost9 + scost2
+                        scost2 = scost2 + 10
+                        var dcost7 = dcost8 + scost2
+                        scost2 = scost2 + 10
+                        var dcost6 = dcost7 + scost2
+                        scost2 = scost2 + 10
+                        var dcost5 = dcost6 + scost2
+                        scost2 = scost2 + 10
+                        var dcost4 = dcost5 + scost2
+                        scost2 = scost2 + 10
+                        var dcost3 = dcost4 + scost2
+                        scost2 = scost2 + 10
+                        var dcost2 = dcost3 + scost2
+                        scost2 = scost2 + 10
+                        var dcost1 = dcost2 + scost2
+                        dcostm = (dcost1 + dcost2 + dcost3 + dcost4 + dcost5 + dcost6 + dcost7 + dcost8 + dcost9 + dcost10)
+                    } else {
+                        if(selectedLogo === 3){
+                            var sccost = ccost
+                            scost3 = cost3
+                            var ccost10 = sccost
+                            var ccost9 = ccost10 + scost3
+                            scost3 = scost3 + 15
+                            var ccost8 = ccost9 + scost3
+                            scost3 = scost3 + 15
+                            var ccost7 = ccost8 + scost3
+                            scost3 = scost3 + 15
+                            var ccost6 = ccost7 + scost3
+                            scost3 = scost3 + 15
+                            var ccost5 = ccost6 + scost3
+                            scost3 = scost3 + 15
+                            var ccost4 = ccost5 + scost3
+                            scost3 = scost3 + 15
+                            var ccost3 = ccost4 + scost3
+                            scost3 = scost3 + 15
+                            var ccost2 = ccost3 + scost3
+                            scost3 = scost3 + 1
+                            var ccost1 = ccost2 + scost3
+                            ccostm = (ccost1 + ccost2 + ccost3 + ccost4 + ccost5 + ccost6 + ccost7 + ccost8 + ccost9 + ccost10)
+                        } else {
+                            if(selectedLogo === 4){
+                                var stcost = tcost
+                                scost4 = cost4
+                                var tcost10 = stcost
+                                var tcost9 = tcost10 + scost4
+                                scost4 = scost4 + 20
+                                var tcost8 = tcost9 + scost4
+                                scost4 = scost4 + 20
+                                var tcost7 = tcost8 + scost4
+                                scost4 = scost4 + 20
+                                var tcost6 = tcost7 + scost4
+                                scost4 = scost4 + 20
+                                var tcost5 = tcost6 + scost4
+                                scost4 = scost4 + 20
+                                var tcost4 = tcost5 + scost4
+                                scost4 = scost4 + 20
+                                var tcost3 = tcost4 + scost4
+                                scost4 = scost4 + 20
+                                var tcost2 = tcost3 + scost4
+                                scost4 = scost4 + 20
+                                var tcost1 = tcost2 + scost4
+                                tcostm = (tcost1 + tcost2 + tcost3 + tcost4 + tcost5 + tcost6 + tcost7 + tcost8 + tcost9 + tcost10)
+                            } else {
+                                if(selectedLogo === 5){
+                                    var smcost = mcost
+                                    scost5 = cost5
+                                    var mcost10 = smcost
+                                    var mcost9 = mcost10 + scost5
+                                    scost5 = scost5 + 25
+                                    var mcost8 = mcost9 + scost5
+                                    scost5 = scost5 + 25
+                                    var mcost7 = mcost8 + scost5
+                                    scost5 = scost5 + 25
+                                    var mcost6 = mcost7 + scost5
+                                    scost5 = scost5 + 25
+                                    var mcost5 = mcost6 + scost5
+                                    scost5 = scost5 + 25
+                                    var mcost4 = mcost5 + scost5
+                                    scost5 = scost5 + 25
+                                    var mcost3 = mcost4 + scost5
+                                    scost5 = scost5 + 25
+                                    var mcost2 = mcost3 + scost5
+                                    scost5 = scost5 + 25
+                                    var mcost1 = mcost2 + scost5
+                                    mcostm = (mcost1 + mcost2 + mcost3 + mcost4 + mcost5 + mcost6 + mcost7 + mcost8 + mcost9 + mcost10)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         var costN = 0
         var cLogo = 0
         if (selectedLogo === 1){
             costN = "Ubuntu"
-            if (ucost > 9999){
-                if (ucost > 9999999) {
-                    if (ucost > 9999999999){
-                        ucostA = (ucost / 1000000000) + "B"
+            if (ucostm > 9999){
+                if (ucostm > 9999999) {
+                    if (ucostm > 9999999999){
+                        ucostA = (ucostm / 1000000000) + "B"
                     } else {
-                        ucostA = (ucost / 1000000) + "M"
+                        ucostA = (ucostm / 1000000) + "M"
                     }
                 } else {
-                    ucostA = (ucost / 1000) + "K"
+                    ucostA = (ucostm / 1000) + "K"
                 }
             } else {
-                ucostA = ucost
+                ucostA = ucostm
             }
-            costB = ucostA
+            costBA = ucostA
             cLogo = [0]
         } else {
             if (selectedLogo === 2){
                 costN = "Debian"
-                if (dcost > 9999){
-                    if (dcost > 9999999) {
-                        if (dcost > 9999999999){
-                            dcostA = (dcost / 1000000000) + "B"
+                if (dcostm > 9999){
+                    if (dcostm > 9999999) {
+                        if (dcostm > 9999999999){
+                            dcostA = (dcostm / 1000000000) + "B"
                         } else {
-                            dcostA = (dcost / 1000000) + "M"
+                            dcostA = (dcostm / 1000000) + "M"
                         }
                     } else {
-                        dcostA = (dcost / 1000) + "K"
+                        dcostA = (dcostm / 1000) + "K"
                     }
                 } else {
-                    dcostA = dcost
+                    dcostA = dcostm
                 }
-                costB = dcostA
+                costBA = dcostA
                 cLogo = [1]
             } else {
                 if (selectedLogo === 3){
                     costN = "CentOS"
-                    if (ccost > 9999){
-                        if (ccost > 9999999) {
-                            if (ccost > 9999999999){
-                                ccostA = (ccost / 1000000000) + "B"
+                    if (ccostm > 9999){
+                        if (ccostm > 9999999) {
+                            if (ccostm > 9999999999){
+                                ccostA = (ccostm / 1000000000) + "B"
                             } else {
-                                ccostA = (ccost / 1000000) + "M"
+                                ccostA = (ccostm / 1000000) + "M"
                             }
                         } else {
-                            ccostA = (ccost / 1000) + "K"
+                            ccostA = (ccostm / 1000) + "K"
                         }
                     } else {
-                        ccostA = ccost
+                        ccostA = ccostm
                     }
-                    costB = ccostA
+                    costBA = ccostA
                     cLogo = [2]
                 } else {
                     if (selectedLogo === 4){
                     costN = "Talis"
-                    if (tcost > 9999){
-                        if (tcost > 9999999) {
-                            if (tcost > 9999999999){
-                                tcostA = (tcost / 1000000000) + "B"
+                    if (tcostm > 9999){
+                        if (tcostm > 9999999) {
+                            if (tcostm > 9999999999){
+                                tcostA = (tcostm / 1000000000) + "B"
                             } else {
-                                tcostA = (tcost / 1000000) + "M"
+                                tcostA = (tcostm / 1000000) + "M"
                             }
                         } else {
-                            tcostA = (tcost / 1000) + "K"
+                            tcostA = (tcostm / 1000) + "K"
                         }
                     } else {
-                        tcostA = tcost
+                        tcostA = tcostm
                     }
-                    costB = tcostA
+                    costBA = tcostA
                     cLogo = [3]
                     } else {
                         if (selectedLogo === 5){
                             costN = "Mint"
-                            if (mcost > 9999){
-                                if (mcost > 9999999) {
-                                    if (mcost > 9999999999){
-                                        mcostA = (mcost / 1000000000) + "B"
+                            if (mcostm > 9999){
+                                if (mcostm > 9999999) {
+                                    if (mcostm > 9999999999){
+                                        mcostA = (mcostm / 1000000000) + "B"
                                     } else {
-                                        mcostA = (mcost / 1000000) + "M"
+                                        mcostA = (mcostm / 1000000) + "M"
                                     }
                                 } else {
-                                    mcostA = (mcost / 1000) + "K"
+                                    mcostA = (mcostm / 1000) + "K"
                                 }
                             } else {
-                                mcostA = mcost
+                                mcostA = mcostm
                             }
-                            costB = mcostA
+                            costBA = mcostA
                             cLogo = [4]
                         }
                     }
@@ -356,7 +500,6 @@ function codeReset() {
         } else {
             mUcostA = mUcost
         }
-        costB = ucostA
         uUsers1 = uUsers * uUsersUpgrade
         dUsers1 = dUsers * dUsersUpgrade
         cUsers1 = cUsers * cUsersUpgrade
@@ -531,48 +674,83 @@ function Reset() {
 
 function buy(){  
     if (selectedLogo === 1){
-        if (code >= ucost){
-            code = code - ucost
-            ucost = ucost + cost1
-            uUsers = uUsers + 1
-            uUsers1 = uUsers1 + 1
-            cost1 = cost1 + 1
+        if (code >= ucostm){
+            code = code - ucostm
+            ucostm = ucostm + cost1
+            uUsers = uUsers + buyAmount
+            uUsers1 = uUsers1 + buyAmount
+            if(buyAmount === 1){
+                cost1 = cost1 + 1
+            } else {
+                if(buyAmount === 10){
+                    cost1 = scost1
+                }
+            }
+            ucost = ucostm
     }  
 } else {
         if (selectedLogo === 2){
-            if (code >= dcost){
-                code = code - dcost
-                dcost = dcost + cost2
-                dUsers = dUsers + 1
-                dUsers1 = dUsers1 + 1
-                cost2 = cost2 + 10
+            if (code >= dcostm){
+                code = code - dcostm
+                dcostm = dcostm + cost2
+                dUsers = dUsers + buyAmount
+                dUsers1 = dUsers1 + buyAmount
+                if(buyAmount === 1){
+                    cost2 = cost2 + 10
+                } else {
+                    if(buyAmount === 10){
+                        cost2 = scost2
+                    }
+                }
+                dcost = dcostm
     }
 } else {
     if (selectedLogo === 3){
-       if (code >= ccost){
-       code = code - ccost
-       ccost = ccost + cost3
-       cUsers = cUsers + 1
-       cUsers1 = cUsers1 + 1
-       cost3 = cost3 + 15
+       if (code >= ccostm){
+       code = code - ccostm
+       ccostm = ccostm + cost3
+       cUsers = cUsers + buyAmount
+       cUsers1 = cUsers1 + buyAmount
+       if(buyAmount === 1){
+        cost3 = cost3 + 15
+    } else {
+        if(buyAmount === 10){
+            cost3 = scost3
+        }
+    }
+       ccost = ccostm
        }
    } else {
        if (selectedLogo === 4) {
-           if (code >= tcost){
-               code = code - tcost
-               tcost = tcost + cost4
-               tUsers = tUsers + 1
-               tUsers1 = tUsers1 + 1
-               cost4 = cost4 + 20
+           if (code >= tcostm){
+               code = code - tcostm
+               tcostm = tcostm + cost4
+               tUsers = tUsers + buyAmount
+               tUsers1 = tUsers1 + buyAmount
+               if(buyAmount === 1){
+                cost4 = cost4 + 20
+            } else {
+                if(buyAmount === 10){
+                    cost4 = scost4
+                }
+            }
+               tcost = tcostm
            }
        } else {
            if (selectedLogo === 5){
-            if (code >= mcost){
-                code = code - mcost
-                mcost = mcost + cost5
-                mUsers = mUsers + 1
-                mUsers1 = mUsers1 + 1
-                cost5 = cost5 + 25
+            if (code >= mcostm){
+                code = code - mcostm
+                mcostm = mcostm + cost5
+                mUsers = mUsers + buyAmount
+                mUsers1 = mUsers1 + buyAmount
+                if(buyAmount === 1){
+                    cost5 = cost5 + 25
+                } else {
+                    if(buyAmount === 10){
+                        cost5 = scost5
+                    }
+                }
+                mcost = mcostm
             }
            }
        }
@@ -724,7 +902,7 @@ function mUpgrade(){
 function away(){
     setTimeout(() => {
         awayA()
-    }, 1000)
+    }, 100)
 }
 function awayA(){
     console.log(codePSTA, secondsAway);
@@ -745,8 +923,9 @@ function awayA(){
     } else {
         offD = off
     }
+    var offDF = offD.toFixed(1)
     alert("while you were away you have earn't")
-    alert(offD)
+    alert(offDF)
     code = code + off
     off = 0
 }
@@ -760,11 +939,59 @@ function disableScroll() {
             window.scrollTo(scrollLeft, scrollTop); 
         }; 
 } 
+
+function sell(){
+    if(selectedLogo === 1){
+        if(uUsers > 0){
+        cost1 = cost1 - 1
+        ucost = ucost - cost1
+        uUsers = uUsers - 1
+        code = code + ucost
+        }
+    } else {
+        if(selectedLogo === 2){
+            if(dUsers > 0){
+            cost2 = cost2 - 10
+            dcost = dcost - cost2
+            dUsers = dUsers - 1
+            code = code + dcost
+            }
+        } else {
+            if(selectedLogo === 3){
+                if(cUsers > 0){
+                cost3 = cost3 - 15
+                ccost = ccost - cost3
+                cUsers = cUsers - 1
+                code = code + ccost
+                }
+            } else {
+                if(selectedLogo === 4){
+                    if(tUsers > 0){
+                    cost4 = cost4 - 20
+                    tcost = tcost - cost4
+                    tUsers = tUsers - 1
+                    code = code + tcost
+                    }
+                } else {
+                    if(selectedLogo === 5){
+                        if(mUsers > 0){
+                        cost5 = cost5 - 25
+                        mcost = mcost - cost5
+                        mUsers = mUsers - 1
+                        code = code + mcost
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 var costBA
+
 function buy1(){
-    costBA = costB
+    buyAmount = 1
 }
 
 function buy10(){
-    var costInQuestion = 0
+    buyAmount = 10
 }
