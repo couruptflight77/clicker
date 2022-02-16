@@ -1,5 +1,5 @@
 #reset {
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSkBr5HUYE1Dzo9W9QECvPJ5g8KT63qcOChJrhR0blJ-3W1tLz);
+    background-image: url("/Users/brockpoulson/Downloads/NORAD COMMAND/Norad-Command-Center/linux Logo's/ACID.jpeg");
     width: 6.3cm;
     height: 5.5cm;
     color: blue ;
@@ -39,14 +39,21 @@ img {
 
 #linux {
     padding-top: 0.7cm;
-    width: 7.5cm;   
-    height: 7.5cm;
+    width: 10cm;   
+    height: 10cm;
+    position: absolute;
+    left: 12.5cm
 }
 
 .usersName {
-    top: 1cm;
-    right: 26cm;
+    top: 0.95cm;
+    right: 25.9cm;
+    width: 2.7cm;
     position: fixed;
+    background-color: orange;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: blue;
 }
 
 .usersNum {
@@ -73,8 +80,13 @@ img {
 
 .usersName1 {
     top: 1cm;
-    right: 23cm; 
+    right: 22.9cm;
+    width: 2.7cm; 
     position: fixed;
+    background-color:  pink;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: blue;
 }
 
 .usersNum1 {
@@ -85,8 +97,13 @@ img {
 
 .usersName2 {
     top: 1cm;
-    right: 20cm; 
+    right: 19.9cm;
+    width: 2.7cm; 
     position: fixed;
+    background-color:  purple;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: blue;
 }
 
 .usersNum2 {
@@ -102,13 +119,23 @@ img {
 
 .usersName3 {
     top: 1cm;
-    right: 17cm; 
+    right: 16.9cm;
+    width: 2.7cm; 
     position: fixed;
+    background-color:  lightskyblue;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: blue;
 }
 .usersName4 {
     top: 1cm;
-    right: 14cm; 
+    right: 13.9cm;
+    width: 2.7cm; 
     position: fixed;
+    background-color:  limegreen;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: blue;
 }
 
 .usersNum3 {
@@ -166,37 +193,37 @@ img {
 
 .upgradeu{
     position: fixed;
-    bottom: 1cm;
-    right: 3cm;
-    height: 1cm;
+    bottom: 0.5cm;
+    right: 13cm;
+    height: 1.5cm;
     width: 2cm;
 }
 .upgraded{
     position: fixed;
-    bottom: 1cm;
-    right: 5cm;
-    height: 1cm;
+    bottom: 0.5cm;
+    right: 15cm;
+    height: 1.5cm;
     width: 2cm;
 }
 .upgradec{
     position: fixed;
-    bottom: 1cm;
-    right: 7cm;
-    height: 1cm;
+    bottom: 0.5cm;
+    right: 17cm;
+    height: 1.5cm;
     width: 2cm;
 }
 .upgradet{
     position: fixed;
-    bottom: 1cm;
-    right: 9cm;
-    height: 1cm;
+    bottom: 0.5cm;
+    right: 19cm;
+    height: 1.5cm;
     width: 2cm;
 }
 .upgradem{
     position: fixed;
-    bottom: 1cm;
-    right: 11cm;
-    height: 1cm;
+    bottom: 0.5cm;
+    right: 21cm;
+    height: 1.5cm;
     width: 2cm;
 }
 #noClick{
@@ -209,7 +236,12 @@ img {
 
 .codeD{
     position: relative;
-    left: 3.4cm;
+    left: 3.1cm;
+    z-index: 100;
+}
+.i{
+    position: relative;
+    left: 2.35cm;
     z-index: 100;
 }
 
@@ -228,7 +260,15 @@ img {
     position: fixed;
     background-color: lawngreen;
     color: lawngreen;
-    top: 4.8cm;
+    top: 4.1cm;
+    z-index: -1;
+    height: 1cm;
+}
+.t4{
+    position: fixed;
+    background-color: lawngreen;
+    color: lawngreen;
+    top: 6.1cm;
     z-index: -1;
     height: 1cm;
 }
@@ -254,3 +294,157 @@ img {
     height: 2cm;
 }
 
+.usersName5 {
+    top: 3cm;
+    right: 25.9cm;
+    width: 2.7cm; 
+    position: fixed;
+    background-color:  lightcyan;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: blue;
+}
+
+.userNumb5 {
+    top: 4cm;
+    right: 26cm;
+    position: fixed;
+}
+
+.usersName6 {
+    top: 3cm;
+    right: 22.9cm;
+    width: 2.7cm; 
+    position: fixed;
+    background-color:  lightblue;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: blue;
+}
+
+.userNumb6 {
+    top: 4cm;
+    right: 23cm;
+    position: fixed;
+}
+
+.usersName7 {
+    top: 3cm;
+    right: 19.9cm;
+    width: 2.7cm; 
+    position: fixed;
+    background-color:  red;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: blue;
+}
+
+.userNumb7 {
+    top: 4cm;
+    right: 20cm;
+    position: fixed;
+}
+
+.usersName8 {
+    top: 3cm;
+    right: 16.9cm;
+    width: 2.7cm; 
+    position: fixed;
+    background-color:  greenyellow;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: blue;
+}
+
+.userNumb8 {
+    top: 4cm;
+    right: 17cm;
+    position: fixed;
+}
+
+.usersName9 {
+    top: 3cm;
+    right: 13.9cm;
+    width: 2.7cm; 
+    position: fixed;
+    background-color:  blue;
+    border-width: 0.3mm;
+    border-style: solid;
+    border-color: red;
+}
+
+.userNumb9 {
+    top: 4cm;
+    right: 14cm;
+    position: fixed;
+}
+
+.usersNum9 {
+    top: 3.5cm;
+    right: 14cm;
+    position: fixed;
+}
+
+.usersNum8 {
+    top: 3.5cm;
+    right: 17cm;
+    position: fixed;
+}
+
+.usersNum7 {
+    top: 3.5cm;
+    right: 20cm;
+    position: fixed;
+}
+
+.usersNum6 {
+    top: 3.5cm;
+    right: 23cm;
+    position: fixed;
+}
+
+.usersNum5 {
+    top: 3.5cm;
+    right: 26cm;
+    position: fixed;
+}
+
+.upgradef{
+    position: fixed;
+    bottom: 0.5cm;
+    right: 11cm;
+    height: 1.5cm;
+    width: 2cm;
+}
+
+.upgrades{
+    position: fixed;
+    bottom: 0.5cm;
+    right: 9cm;
+    height: 1.5cm;
+    width: 2cm;
+}
+
+.upgrader{
+    position: fixed;
+    bottom: 0.5cm;
+    right: 7cm;
+    height: 1.5cm;
+    width: 2cm;
+}
+
+.upgradema{
+    position: fixed;
+    bottom: 0.5cm;
+    right: 5cm;
+    height: 1.5cm;
+    width: 2cm;
+}
+
+.upgradea{
+    position: fixed;
+    bottom: 0.5cm;
+    right: 3cm;
+    height: 1.5cm;
+    width: 2cm;
+}
