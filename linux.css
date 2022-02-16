@@ -10,17 +10,19 @@
 }
 
 #OS1 {
-    width: 10cm;
+    width: 6cm;
     height:2cm;
 }
 
 #OS2 {
-    width: 10cm;
+    left:2cm;
+    width: 4cm;
     height:2cm;
+    position: relative;
 }
 
 #OS3 {
-    width: 10cm;
+    width: 6cm;
     height:2cm;
 }
 
@@ -289,7 +291,7 @@ img {
 }
 .s{
     position: fixed;
-    right: 11cm;
+    right: 5cm;
     width: 2cm;
     height: 2cm;
 }
