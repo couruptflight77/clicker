@@ -994,21 +994,39 @@ function codeReset() {
         } else {
             rUsers1A = rUsers1
         }
-        if (codeF > 999){
-            if (codeF > 999999) {
-                if (codeF > 999999999){
-                    if(codeF > 999999999999){
-                        codeF = (codeF / 1000000000000).toFixed(1) + "T"
+        maUsers1 = maUsers1 * 260000 
+        if (maUsers1 > 999){
+            if (maUsers1 > 999999) {
+                if (maUsers1 > 999999999){
+                    if(maUsers1 > 999999999999){
+                        maUsers1A = (maUsers1 / 1000000000000).toFixed(1) + "T"
                     }
-                    codeF = (codeF / 1000000000) .toFixed(1) + "B"
+                    maUsers1A = (maUsers1 / 1000000000) .toFixed(1) + "B"
                 } else {
-                    codeF = (codeF / 1000000) .toFixed(1) + "M"
+                    maUsers1A = (maUsers1 / 1000000) .toFixed(1) + "M"
                 }
             } else {
-                codeF = (codeF / 1000) .toFixed(1) + "K"
+                maUsers1A = (maUsers1 / 1000) .toFixed(1) + "K"
             }
         } else {
-            codeF = codeF
+            maUsers1A = maUsers1
+        }
+        aUsers1 = aUsers1 * 1600000
+        if (aUsers1 > 999){
+            if (aUsers1 > 999999) {
+                if (aUsers1 > 999999999){
+                    if(aUsers1 > 999999999999){
+                        aUsers1A = (aUsers1 / 1000000000000).toFixed(1) + "T"
+                    }
+                    aUsers1A = (aUsers1 / 1000000000) .toFixed(1) + "B"
+                } else {
+                    aUsers1A = (aUsers1 / 1000000) .toFixed(1) + "M"
+                }
+            } else {
+                aUsers1A = (aUsers1 / 1000) .toFixed(1) + "K"
+            }
+        } else {
+            aUsers1A = aUsers1
         }
         codeDiv.innerHTML = "<br><em>" + codeF + " Code" + "</em>";
         code1Div.innerHTML = "<em>" + codePSF + " Code Per Second" + "</em>";
@@ -1033,8 +1051,8 @@ function codeReset() {
         codePerFedora.innerHTML = "<em>" + fUsers1A + "</em>"
         codePerSlaveware.innerHTML = "<em>" + sUsers1A + "</em>"
         codePerRedhat.innerHTML = "<em>" + rUsers1A + "</em>"
-        codePerManjaro.innerHTML = "<em>" + maUsers1 * 260000 + "</em>"
-        codePerArch.innerHTML = "<em>" + aUsers1 * 1600000 + "</em>"
+        codePerManjaro.innerHTML = "<em>" + maUsers1A + "</em>"
+        codePerArch.innerHTML = "<em>" + aUsers1A + "</em>"
         clickCodeCost.innerHTML = "<em>" + clickUpgradeCost + "</em>"
         clickCodeCost1.innerHTML = "<em>" + clickCode + "</em>"
         uupgrade.innerHTML = "<em>" + uUcost + "</em>"
