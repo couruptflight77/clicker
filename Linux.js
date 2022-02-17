@@ -1222,7 +1222,7 @@ function Reset() {
 }
 
 function newLife(){
-    var newLife = prompt("confirm with Y")
+    var newLife = prompt("Use Y to start the game")
     if (newLife === "Y") {
         codeCountActive = 0
         setTimeout(100)
