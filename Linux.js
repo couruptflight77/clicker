@@ -91,7 +91,6 @@ var Ucost4String = localStorage.getItem("Ucost4")
 var Ucost4 = parseInt(Ucost4String)
 var Ucost5String = localStorage.getItem("Ucost5")
 var Ucost5 = parseInt(Ucost5String)
-// new
 var lifeCurrentString = localStorage.getItem("currentLife")
 var lifeCurrent = parseInt(lifeCurrentString)
 var fcostString = localStorage.getItem("fcost")
@@ -221,6 +220,11 @@ var bMTH = new Date().getMonth()
 var dMTH = bMTH - aMTH
 var secondsAwayMTH = dMTH * 2628000
 
+var aYr = parseInt(localStorage.getItem("onlineYr"))
+var bYr = new Date().getFullYear()
+var dYr = bYr - aYr
+var secondsAwayYr = dYr * 3153600
+
 var aD = parseInt(localStorage.getItem("onlineD"))
 var bD = new Date().getDate()
 var dD = bD - aD
@@ -241,10 +245,7 @@ var bS = new Date().getSeconds()
 var dS = bS - aS
 var secondsAwayS = dS * 1
 
-secondsAway = secondsAwayD + secondsAwayH + secondsAwayM + secondsAwayS + secondsAwayMTH
-if(secondsAway > 59){
-
-}
+secondsAway = secondsAwayD + secondsAwayH + secondsAwayM + secondsAwayS + secondsAwayMTH + secondsAwayYr
 
 var uUsers1 = uUsers * uUsersUpgrade
 var dUsers1 = dUsers * dUsersUpgrade
@@ -278,13 +279,6 @@ window.addEventListener("keyup", e => {
     console.log("localStorage");   
   }
 });
-window.addEventListener("keyup", e => {
-    pressed2.push(e.key);
-    pressed2.splice(-secretCode2.length - 1, pressed2.length - secretCode2.length);
-    if (pressed.join("").includes(secretCode2)) {
-      location.replace("Norad.html")   
-    }
-  });
 
 var lg = []
 lg[0] = "linux Logo's/Logo1.jpg"
@@ -834,9 +828,12 @@ function codeReset() {
         localStorage.setItem("maUsersUpgrade", maUsersUpgrade)
         localStorage.removeItem("aUsersUpgrade")
         localStorage.setItem("aUsersUpgrade", aUsersUpgrade)
-        //end new
         localStorage.removeItem("linuxClickUpgraded")
         localStorage.setItem("linuxClickUpgraded", clickUpgrade)
+        localStorage.removeItem("onlineYr")
+        localStorage.setItem("onlineYr", new Date().getFullYear())
+        localStorage.removeItem("onlineMTH")
+        localStorage.setItem("onlineMTH", new Date().getMonth())
         localStorage.removeItem("onlineD")
         localStorage.setItem("onlineD", new Date().getDate())
         localStorage.removeItem("onlineM")
@@ -946,53 +943,56 @@ function codeReset() {
         } else {
             mUsers1A = mUsers1
         }
-        if (codeF > 999){
-            if (codeF > 999999) {
-                if (codeF > 999999999){
-                    if(codeF > 999999999999){
-                        codeF = (codeF / 1000000000000).toFixed(1) + "T"
+        fUsers1 = fUsers1 * 1400
+        if (fUsers1 > 999){
+            if (fUsers1 > 999999) {
+                if (fUsers1 > 999999999){
+                    if(fUsers1 > 999999999999){
+                        fUsers1A = (fUsers1 / 1000000000000).toFixed(1) + "T"
                     }
-                    codeF = (codeF / 1000000000) .toFixed(1) + "B"
+                    fUsers1A = (fUsers1 / 1000000000) .toFixed(1) + "B"
                 } else {
-                    codeF = (codeF / 1000000) .toFixed(1) + "M"
+                    fUsers1A = (fUsers1 / 1000000) .toFixed(1) + "M"
                 }
             } else {
-                codeF = (codeF / 1000) .toFixed(1) + "K"
+                fUsers1A = (fUsers1 / 1000) .toFixed(1) + "K"
             }
         } else {
-            codeF = codeF
+            fUsers1A = fUsers1
         }
-        if (codeF > 999){
-            if (codeF > 999999) {
-                if (codeF > 999999999){
-                    if(codeF > 999999999999){
-                        codeF = (codeF / 1000000000000).toFixed(1) + "T"
+        sUsers1 = sUsers1 * 7800
+        if (sUsers1 > 999){
+            if (sUsers1 > 999999) {
+                if (sUsers1 > 999999999){
+                    if(sUsers1 > 999999999999){
+                        sUsers1A = (sUsers1 / 1000000000000).toFixed(1) + "T"
                     }
-                    codeF = (codeF / 1000000000) .toFixed(1) + "B"
+                    sUsers1A = (sUsers1 / 1000000000) .toFixed(1) + "B"
                 } else {
-                    codeF = (codeF / 1000000) .toFixed(1) + "M"
+                    sUsers1A = (sUsers1 / 1000000) .toFixed(1) + "M"
                 }
             } else {
-                codeF = (codeF / 1000) .toFixed(1) + "K"
+                sUsers1A = (sUsers1 / 1000) .toFixed(1) + "K"
             }
         } else {
-            codeF = codeF
+            sUsers1A = sUsers1
         }
-        if (codeF > 999){
-            if (codeF > 999999) {
-                if (codeF > 999999999){
-                    if(codeF > 999999999999){
-                        codeF = (codeF / 1000000000000).toFixed(1) + "T"
+        rUsers1 = rUsers1 * 44000
+        if (rUsers1 > 999){
+            if (rUsers1 > 999999) {
+                if (rUsers1 > 999999999){
+                    if(rUsers1 > 999999999999){
+                        rUsers1A = (rUsers1 / 1000000000000).toFixed(1) + "T"
                     }
-                    codeF = (codeF / 1000000000) .toFixed(1) + "B"
+                    rUsers1A = (rUsers1 / 1000000000) .toFixed(1) + "B"
                 } else {
-                    codeF = (codeF / 1000000) .toFixed(1) + "M"
+                    rUsers1A = (rUsers1 / 1000000) .toFixed(1) + "M"
                 }
             } else {
-                codeF = (codeF / 1000) .toFixed(1) + "K"
+                rUsers1A = (rUsers1 / 1000) .toFixed(1) + "K"
             }
         } else {
-            codeF = codeF
+            rUsers1A = rUsers1
         }
         if (codeF > 999){
             if (codeF > 999999) {
@@ -1030,9 +1030,9 @@ function codeReset() {
         codePerCentOS.innerHTML = "<em>" + cUsers1A + "</em>"
         codePerTalis.innerHTML = "<em>" + tUsers1A + "</em>"
         codePerMint.innerHTML = "<em>" + mUsers1A + "</em>"
-        codePerFedora.innerHTML = "<em>" + fUsers * 1400 + "</em>"
-        codePerSlaveware.innerHTML = "<em>" + sUsers1 * 7800 + "</em>"
-        codePerRedhat.innerHTML = "<em>" + rUsers1 * 44000 + "</em>"
+        codePerFedora.innerHTML = "<em>" + fUsers1A + "</em>"
+        codePerSlaveware.innerHTML = "<em>" + sUsers1A + "</em>"
+        codePerRedhat.innerHTML = "<em>" + rUsers1A + "</em>"
         codePerManjaro.innerHTML = "<em>" + maUsers1 * 260000 + "</em>"
         codePerArch.innerHTML = "<em>" + aUsers1 * 1600000 + "</em>"
         clickCodeCost.innerHTML = "<em>" + clickUpgradeCost + "</em>"
@@ -1183,10 +1183,14 @@ function Reset() {
         localStorage.setItem("maUsersUpgrade", 1)
         localStorage.removeItem("aUsersUpgrade")
         localStorage.setItem("aUsersUpgrade", 1)
-        localStorage.removeItem("onlineD", new Date().getDate())
-        localStorage.removeItem("onlineM", new Date().getMinutes())
-        localStorage.removeItem("onlineH", new Date().getHours())
-        localStorage.removeItem("onlineS", new Date().getSeconds())
+        localStorage.removeItem("onlineYr")
+        localStorage.removeItem("onlineMTH")
+        localStorage.removeItem("onlineD")
+        localStorage.removeItem("onlineM")
+        localStorage.removeItem("onlineH")
+        localStorage.removeItem("onlineS")
+        localStorage.setItem("onlineYr", new Date().getFullYear())
+        localStorage.setItem("onlineMTH", new Date().getMonth())
         localStorage.setItem("onlineD", new Date().getDate())
         localStorage.setItem("onlineM", new Date().getMinutes())
         localStorage.setItem("onlineH", new Date().getHours())
@@ -1622,7 +1626,6 @@ function awayA(){
     if(secondsAway > 59){
         var off = secondsAway * codePSNS
         if (off === 0){
-            null
         } else {
         if (off > 9999){
             if (off > 9999999) {
@@ -1638,11 +1641,12 @@ function awayA(){
             offD = off
         }
         var offDF = offD
-        alert("while you were away you have earn't")
-        alert(offDF)
+        alert("while you were away you have earn't " + offD)
         code = code + off
         off = 0
     }
+} else {
+    console.log(secondsAway);
 }
 }
 
